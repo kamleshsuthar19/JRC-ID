@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Details Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/stylesheet.css">
+
+</head>
+
+<body>
+
+
+    <div class="form-wrapper">
+        <div class="form-card">
+            <h2>User Registration Form</h2>
+            <form action="http://localhost:4500/submit" method="post" id="userForm" enctype="multipart/form-data">
+
+                <!-- 🟨 Section: Personal -->
+                <div class="form-section">
+                    <h3>Personal Details</h3>
+
+                    <div class="form-group">
+                        <label>User ID</label>
+                        <input type="text" id="userID" name="userID" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Father's Name</label>
+                        <input type="text" id="fatherName" name="fatherName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male" /> Male</label>
+                            <label><input type="radio" name="gender" value="Female" /> Female</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group form-group-1">
+                            <label>Date of Birth</label>
+                            <input type="date" id="dob" name="dob" />
+                        </div>
+
+                        <div class="form-group form-group-2">
+                            <label>Date of Joining</label>
+                            <input type="date" id="doj" name="doj" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🟨 Section: Job Info -->
+                <div class="form-section">
+                    <h3>Job Information</h3>
+                    <div class="form-group">
+                        <label>Department</label>
+                        <select id="department" name="department">
+                            <option disabled selected>Select</option>
+                            <option>Carpenter</option>
+                            <option>Painter</option>
+                            <option>Civil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Designation</label>
+                        <select id="designation" name="designation">
+                            <option disabled selected>Select</option>
+                            <option>Half Mistri</option>
+                            <option>Helper</option>
+                            <option>Mistri</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Site</label>
+                        <select id="site" name="site">
+                            <option disabled selected>Select</option>
+                            <option>Campian School</option>
+                            <option>Damani</option>
+                            <option>D Decor</option>
+                            <option>EON One</option>
+                            <option>J Kumar</option>
+                            <option>Kalpataru</option>
+                            <option>Lodha One Place</option>
+                            <option>Naigaon Factory Unit-01</option>
+                            <option>Naigaon Factory Unit-02</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 🟨 Section: Bank & Contact -->
+                <div class="form-section">
+                    <h3>Contact & Bank Details</h3>
+
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="number" id="mobileNumber" name="mobileNumber" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Aadhar Number</label>
+                        <input type="number" id="aadharNumber" name="aadharNumber" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Account Number</label>
+                        <input type="number" id="accountNumber" name="accountNumber" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group form-group-1">
+                            <label>IFSC Code</label>
+                            <input type="text" id="ifsc" name="ifsc" />
+                        </div>
+                        <div class="form-group form-group-2">
+                            <label>Bank Name</label>
+                            <input type="text" id="bankName" name="bankName" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Remarks</label>
+                        <input type="text" id="remarks" name="remarks" />
+                    </div>
+                </div>
+
+                <!-- 🟨 Section: Documents -->
+                <div class="form-section">
+                    <h3>Upload Documents</h3>
+
+                    <div class="form-group">
+                        <label>Aadhar Card (PDF)</label>
+                        <input type="file" name="aadharPdf" accept=".pdf" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>PAN Card (PDF)</label>
+                        <input type="file" name="panPdf" accept=".pdf" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group form-group-1">
+                            <label>Photo Front</label>
+                            <input type="file" name="photoFront" accept="image/*" />
+                        </div>
+                        <div class="form-group form-group-center">
+                            <label>Photo Left</label>
+                            <input type="file" name="photoLeft" accept="image/*" />
+                        </div>
+                        <div class="form-group form-group-2">
+                            <label>Photo Right</label>
+                            <input type="file" name="photoRight" accept="image/*" />
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="output-wrapper">
+
+        <div id="output-card" style="display: none">
+
+            <h2>Output:</h2><br><br>
+
+            <p><strong>User ID: </strong><span class="output-data" id="outputID"></span></p>
+            <p><strong>Name: </strong><span class="output-data" id="outputName"></span></p>
+            <p><strong>Father's Name: </strong><span class="output-data" id="outputFname"></span></p>
+            <p><strong>Gender: </strong><span class="output-data" id="outputGender"></span></p>
+            <p><strong>Date of Birth: </strong><span class="output-data" id="outputDOB"></span></p>
+            <p><strong>Date of Joining: </strong><span class="output-data" id="outputDOJ"></span></p>
+            <p><strong>Department: </strong><span class="output-data" id="outputDepartment"></span></p>
+            <p><strong>Designation: </strong><span class="output-data" id="outputDesignation"></span></p>
+            <p><strong>Site: </strong><span class="output-data" id="outputSite"></span></p>
+            <p><strong>Mobile Number: </strong><span class="output-data" id="outputMobile"></span></p>
+            <p><strong>Aadhar Number: </strong><span class="output-data" id="outputAadhar"></span></p>
+            <p><strong>Account Number: </strong><span class="output-data" id="outputAccount"></span></p>
+            <p><strong>IFSC Code: </strong><span class="output-data" id="outputIFSC"></span></p>
+            <p><strong>Bank Name: </strong><span class="output-data" id="outputBank"></span></p>
+            <p><strong>Remarks: </strong><span class="output-data" id="outputRemarks"></span></p>
+        </div>
+
+    </div>
+
+    <script src="server.js"></script>
+
+
+</body>
+
+</html>
