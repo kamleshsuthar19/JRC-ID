@@ -87,13 +87,14 @@ select:focus {
 
 .form-row {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
 }
 
 .form-row .form-group {
     flex: 1;
-    min-width: 220px;
+    min-width: 150px;
 }
 
 .radio-group {
@@ -142,74 +143,65 @@ button[type="submit"]:hover {
 
 @media (max-width: 700px) {
     .form-wrapper {
-    padding: 10px;
-  }
-
-  .form-card {
-    padding: 20px;
-    box-shadow: none;
-    border-radius: 8px;
-    width: 100%;
-  }
-
-  form h3 {
-    font-size: 1.1rem;
-  }
-
-  .form-group,
-  .form-group-1,
-  .form-group-2,
-  .form-group-center {
-    width: 100% !important;
-    margin: 10px 0;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  input[type="file"],
-  select {
-    font-size: 16px;
-    padding: 10px;
-    width: 100%;
-  }
-
-  .radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
-    margin-top: 20px;
-  }
-
-  .output-wrapper {
-    padding: 10px;
-  }
-
-  #output-card {
-    padding: 15px;
-  }
-
-  .output-data {
-    display: block;
-    margin-top: 4px;
-  }
-
-    /* .form-card {
-        padding: 30px 20px;
+        padding: 10px;
     }
 
-    .form-row {
+    .form-card {
+        padding: 20px;
+        box-shadow: none;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    form h3 {
+        font-size: 1.1rem;
+    }
+
+    .form-group,
+    .form-group-1,
+    .form-group-2,
+    .form-group-center {
+        flex: 0 0 100 !important;
+        width: 100% !important;
+        min-width: auto;
+        margin: 10px 0;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="file"],
+    select {
+        margin: 0 10px;
+        font-size: 16px;
+        padding: 10px;
+        height: 30px;
+        width: 90%;
+    }
+
+    .radio-group {
+        display: flex;
         flex-direction: column;
-    } */
+        gap: 8px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+        margin-top: 20px;
+    }
+
+    .output-wrapper {
+        padding: 10px;
+    }
+
+    #output-card {
+        padding: 15px;
+    }
+
+    .output-data {
+        display: block;
+        margin-top: 4px;
+    }
 }
