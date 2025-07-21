@@ -13,16 +13,17 @@
     <div class="form-wrapper">
         <div class="form-card">
             <h2>User Registration Form</h2>
-            <form action="https://jrcidgeneration.dpdns.org/submit" method="post" id="userForm" enctype="multipart/form-data">
+            <form action="https://haajri.jrcidgeneration.dpdns.org/submit" method="post" id="userForm"
+                enctype="multipart/form-data">
 
                 <!-- 🟨 Section: Personal -->
                 <div class="form-section">
                     <h3>Personal Details</h3>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label>User ID</label>
                         <input type="text" id="userID" name="userID" required />
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label>Name</label>
@@ -165,33 +166,6 @@
             </form>
         </div>
     </div>
-
-    <div class="output-wrapper">
-
-        <div id="output-card" style="display: none">
-
-            <h2>Output:</h2><br><br>
-
-            <p><strong>User ID: </strong><span class="output-data" id="outputID"></span></p>
-            <p><strong>Name: </strong><span class="output-data" id="outputName"></span></p>
-            <p><strong>Father's Name: </strong><span class="output-data" id="outputFname"></span></p>
-            <p><strong>Gender: </strong><span class="output-data" id="outputGender"></span></p>
-            <p><strong>Date of Birth: </strong><span class="output-data" id="outputDOB"></span></p>
-            <p><strong>Date of Joining: </strong><span class="output-data" id="outputDOJ"></span></p>
-            <p><strong>Department: </strong><span class="output-data" id="outputDepartment"></span></p>
-            <p><strong>Designation: </strong><span class="output-data" id="outputDesignation"></span></p>
-            <p><strong>Site: </strong><span class="output-data" id="outputSite"></span></p>
-            <p><strong>Mobile Number: </strong><span class="output-data" id="outputMobile"></span></p>
-            <p><strong>Aadhar Number: </strong><span class="output-data" id="outputAadhar"></span></p>
-            <p><strong>Account Number: </strong><span class="output-data" id="outputAccount"></span></p>
-            <p><strong>IFSC Code: </strong><span class="output-data" id="outputIFSC"></span></p>
-            <p><strong>Bank Name: </strong><span class="output-data" id="outputBank"></span></p>
-            <p><strong>Remarks: </strong><span class="output-data" id="outputRemarks"></span></p>
-        </div>
-
-    </div>
-
-    <script src="server.js"></script>
 
 </body>
 
